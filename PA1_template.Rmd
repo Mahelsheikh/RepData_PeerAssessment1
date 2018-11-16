@@ -23,7 +23,7 @@ TSPD<-amd %>% group_by(date) %>% summarize(total.steps=sum(steps,na.rm = TRUE))
 
 g<-ggplot(TSPD, aes(date,total.steps))
 g+geom_col(color="blue", fill="white")+theme_bw()+
-        labs(x = "Total number of Steps per day", y= "Days", 
+        labs(x = "Days", y= "Total number of Steps per day", 
              title = "Total number of Steps per day")
 ggsave("Total number of Steps per day.png", device = "png")
 ```
